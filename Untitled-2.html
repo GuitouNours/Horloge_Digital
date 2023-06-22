@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      var requestOptions = {
+        method: "GET",
+      };
+      var ip = fetch(
+        "https://api.geoapify.com/v1/ipinfo?&apiKey=7d64178cef784263aa84857befe0dee9",
+        requestOptions
+      ).json;
+      fetch(
+        "https://api.geoapify.com/v1/ipinfo?&apiKey=7d64178cef784263aa84857befe0dee9",
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((success) => (ip = success));
+
+      console.log(ip);
+    </script>
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
